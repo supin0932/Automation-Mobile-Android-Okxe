@@ -42,7 +42,7 @@ class LogoutFacebook:
                                                                                        "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]")))
         click_login.click()
         click_login = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.XPATH,
-                                                                                       "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.Button[2]")))
+                                                                                       "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.Button[1]")))
         click_login.click()
         time.sleep(2)
         self.driver.press_keycode(3)

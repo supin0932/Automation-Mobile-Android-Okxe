@@ -1,5 +1,4 @@
 import unittest
-
 import pytest
 from appium import webdriver
 from pages.Login_with_link import LoginPage2

@@ -1,5 +1,4 @@
 from appium import webdriver
-from appium.webdriver.common.mobileby import MobileBy
 import time
 import pytest
 import unittest
@@ -7,10 +6,7 @@ from utils.driversManages import *
 from pages.Login_with_username_pwd import *
 from pages.Login_with_link import *
 from pages.Logout import LogoutPage
-from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.common.multi_action import *
-from appium.webdriver.extensions.applications import Applications
-from appium.options.android import UiAutomator2Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 

@@ -1,5 +1,4 @@
 from appium import webdriver
-from appium.webdriver.common.mobileby import MobileBy
 import time
 import pytest
 import unittest
@@ -7,16 +6,12 @@ from utils.driversManages import *
 from pages.Login_with_username_pwd import *
 from pages.Login_with_link import *
 from pages.Logout import LogoutPage
-from appium.webdriver.common.touch_action import TouchAction
-from appium.webdriver.common.multi_action import *
-from appium.webdriver.extensions.applications import Applications
-from appium.options.android import UiAutomator2Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pages.Login_fb import LoginFacebook
 from pages.Logout_fb import LogoutFacebook
 from pages.Login_gm import LoginGmail
 from pages.Logout_gm import LogoutGmail
+
+
 
 @pytest.mark.usefixmarkmarktures("driver_Testusefixmarkmarkclass")
 class LoginTest2(unittest.TestCase):
@@ -35,7 +30,7 @@ class LoginTest2(unittest.TestCase):
         self.loginfbobj = LoginFacebook(self.driver)
         self.logoutfbobj = LogoutFacebook(self.driver)
         self.logingmobj = LoginGmail(self.driver)
-        self.logoutgmobj = LogoutGmail(self.driver)
+        self.logingmobj = LogoutGmail(self.driver)
 
     def tearDown(self):
         self.driver.quit()
