@@ -46,3 +46,8 @@ def get_pwd_facebook_id():
 def get_button_login_fb_id():
     return "login_password_step_element"
 
+def get_icon_gmail_id():
+    return "com.okxe.app:id/bt_login_google"
+
+def get_logo_facebook_id():
+    return "Facebook"

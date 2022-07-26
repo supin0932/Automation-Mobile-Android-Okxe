@@ -1,5 +1,4 @@
 from appium.webdriver.common.mobileby import MobileBy
-from locators.loginLocator import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -22,13 +21,9 @@ class LoginPage2:
 
     def click_icon_gmail(self):
         print('Click icon gmail')
-        click_icongmail = self.driver.find_element_by_xpath(get_icon_gmail_xpath())
+        click_icongmail = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, get_icon_gmail_id())))
         click_icongmail.click()
 
-    def click_icon_apple(self):
-        print('Click icon apple')
-        click_iconapple = self.driver.find_element_by_xpath(get_icon_apple_xpath())
-        click_iconapple.click()
 
     def click_username_facebook(self):
         print("Click username facebook")
@@ -143,29 +138,14 @@ class LoginPage2:
         click_continue_login_button = self.driver.find_element_by_xpath(get_continue_login_gmail_button_xpath())
         click_continue_login_button.click()
 
-    def click_usr_apple(self):
-        print("Click username apple")
-        click_usr_apple = self.driver.find_element_by_id(get_usr_apply_id())
-        click_usr_apple.click()
 
-    def enter_usr_apple(self, username):
-        print("Enter username apple")
-        enter_usr_apple = self.driver.find_element_by_id(get_usr_apply_id())
-        enter_usr_apple.clear()
-        enter_usr_apple.send_keys(username)
+    def click_logo_facebook(self):
+        print("Click logo facebook")
+        click_logo_fb = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, get_logo_facebook_id())))
+        click_logo_fb.click()
 
-    def click_pwd_apple(self):
-        print("Click password apple")
-        click_pwd_apple = self.driver.find_element_by_id(get_pwd_apply_id())
-        click_pwd_apple.click()
-
-    def enter_pwd_apple(self, pwd):
-        print("Enter password apple")
-        enter_pwd_apple = self.driver.find_element_by_id(get_pwd_apply_id())
-        enter_pwd_apple.clear()
-        enter_pwd_apple.send_keys(pwd)
-
-    def click_login_apple(self):
-        print("Click login apple")
-        click_login_apple = self.driver.find_element_by_css_selector(get_login_apply_css())
-        click_login_apple.click()
+    def click_icon_home(self):
+        print("Click icon home")
+        CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Trang chủ")))
+        CLICK.click()

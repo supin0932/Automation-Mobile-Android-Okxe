@@ -1,0 +1,10 @@
+Click logo okxe
+Click button login
+Enter username
+Enter password
+Click button enter login
+Click logo account
+Get text username accoutn
+Click icon setting
+Click button logout
+Click button confirm logout

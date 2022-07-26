@@ -1,0 +1,8 @@
+Click logo okxe
+Click button login
+Click icon gmail
+Click logo account
+Get text username accoutn
+Click icon setting
+Click button logout
+Click button confirm logout

@@ -1,0 +1,6 @@
+Click logo okxe
+Click button login
+Enter username
+Enter password
+Click button enter login
+Get text warning
