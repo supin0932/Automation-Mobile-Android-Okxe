@@ -2,12 +2,11 @@
 
 def get_desired_cap1():
     desired_cap = {
-        "appium:deviceName": "Pixel 4 API 30",
-        "appium:uuid": "emulator-5554",
         "platformName": "Android",
-        "appium:platformVersion": "11.0",
-        "appium:noRest": "true",
-        "appium:connectHardwareKeyboard": "True",
+        "appium:platformVersion": "10.0",
+        "appium:deviceName": "pocophone f1",
+        "appium:automationName": "UiAutomator2",
+        "appium:udid": "9a8a0ff0"
         }
     return desired_cap
 
