@@ -33,17 +33,17 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="0932241574")
-        self.loginobj.enter_button_pwd(pwd="@Aa246357")
+        self.loginobj.enter_button_pwd(pwd="@Nhut1176")
         self.loginobj.click_button_enter_login()
         self.loginobj.click_logo_account()
         text = self.loginobj.get_text_username_account()
@@ -64,14 +64,14 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="0932241574")
         self.loginobj.enter_button_pwd(pwd="@Aa2463577")
@@ -91,14 +91,14 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="09322415744")
         self.loginobj.enter_button_pwd(pwd="@Aa246357")
@@ -118,14 +118,14 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="")
         self.loginobj.enter_button_pwd(pwd="")
@@ -145,14 +145,14 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="")
         self.loginobj.enter_button_pwd(pwd="@Aa246357")
@@ -173,14 +173,14 @@ class LoginTest1(unittest.TestCase):
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        try:
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_next_banner()
-            self.loginobj.click_button_complete_banner()
-            self.loginobj.click_button_locate_unaccept()
-
-        except:
-            pass
+        # try:
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        # except:
+        #     pass
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="0932241574")
         self.loginobj.enter_button_pwd(pwd="")

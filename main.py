@@ -21,5 +21,5 @@ if __name__ == '__main__':
     test_suite_login_link = unittest.TestSuite([login_link])
 
     """" run the suite """
-    unittest.TextTestRunner().run(test_suite_login_usr_pw)
     unittest.TextTestRunner().run(test_suite_login_link)
+    unittest.TextTestRunner().run(test_suite_login_usr_pw)

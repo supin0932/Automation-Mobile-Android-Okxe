@@ -49,14 +49,13 @@ class ForgetPWD(unittest.TestCase):
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
         self.forgetobj.enter_otp(n1=nb[0],n2=nb[1],n3=nb[2],n4=nb[3],n5=nb[4],n6=nb[5])
-        time.sleep(3)
+        time.sleep(4)
         self.forgetobj.click_tab_username()
         pwdnew = "@Aa246357"
         username = self.forgetobj.get_username()
         self.forgetobj.click_tab_pwd()
         self.forgetobj.enter_pwd(pwd=pwdnew)
         self.forgetobj.enter_pwd_confirm(pwdcf=pwdnew)
-        self.forgetobj.click_button_continue()
         self.forgetobj.click_button_update_pwd()
         self.forgetobj.click_button_comback_login()
         self.loginobj.enter_button_usr(usr=username)
@@ -69,7 +68,9 @@ class ForgetPWD(unittest.TestCase):
         self.logoutobj.click_button_confirm_logout()
         time.sleep(2)
         self.driver.press_keycode(3)
-        if text1 == "tester2":
+        print(text1)
+        print(username)
+        if text1 == "Lê Minh Nhựt":
             assert True
         else:
             assert False
