@@ -10,22 +10,22 @@ class LoginPage1:
 
     def click_button_next_banner(self):
         print('Click button next banner')
-        click_button_next_banner = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID,get_button_next_banner_id())))
+        click_button_next_banner = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((MobileBy.ID,get_button_next_banner_id())))
         click_button_next_banner.click()
 
     def click_button_complete_banner(self):
         print('Click button complete banner')
-        click_button_complete_banner = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID,get_button_complete_id())))
+        click_button_complete_banner = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((MobileBy.ID,get_button_complete_id())))
         click_button_complete_banner.click()
 
     def click_button_locate_accept(self):
         print('Click button accept locate')
-        click_button_locate_accept = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID,get_button_accept_locate_id())))
+        click_button_locate_accept = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((MobileBy.ID,get_button_accept_locate_id())))
         click_button_locate_accept.click()
 
     def click_button_locate_unaccept(self):
         print('Click button unaccept locate')
-        click_button_locate_unaccept = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID,get_button_unaccept_locate_id())))
+        click_button_locate_unaccept = WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((MobileBy.ID,get_button_unaccept_locate_id())))
         click_button_locate_unaccept.click()
 
     def click_button_usr(self):
@@ -52,7 +52,7 @@ class LoginPage1:
 
     def click_button_login(self):
         print('Click button login')
-        click_button_login = WebDriverWait(self.driver, 60).until(EC.element_to_be_clickable((MobileBy.ID,get_button_login_id())))
+        click_button_login = WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((MobileBy.ID,get_button_login_id())))
         click_button_login.click()
 
     def click_button_enter_login(self):

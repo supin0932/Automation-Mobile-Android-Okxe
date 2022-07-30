@@ -12,17 +12,19 @@ class LogoutGmail:
 
     def logout_gmail(self):
         self.driver.press_keycode(3)
-        """Đăng xuất gmail"""
         print("Logout Gmail")
         CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Gmail")))
         CLICK.click()
-        CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.google.android.gm:id/og_selected_account_disc_apd")))
+        CLICK = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((MobileBy.ID, "com.google.android.gm:id/og_apd_ring_view")))
         CLICK.click()
-        CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.XPATH,"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.cardview.widget.CardView/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[2]")))
-        CLICK.click()
-        CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.XPATH,"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]")))
-        CLICK.click()
-        CLICK = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, "com.android.settings:id/button")))
+        time.sleep(3)
+        TouchAction(self.driver).tap(x=518, y=1203).perform()
+        time.sleep(3)
+        TouchAction(self.driver).tap(x=488, y=357).perform()
+        time.sleep(3)
+        CLICK = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((MobileBy.ID, "com.android.settings:id/button")))
         CLICK.click()
         CLICK = WebDriverWait(self.driver, 50).until(EC.element_to_be_clickable((MobileBy.ID, "android:id/button1")))
         CLICK.click()

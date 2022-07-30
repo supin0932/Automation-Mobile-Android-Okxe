@@ -2,12 +2,12 @@
 
 def get_desired_cap1():
     desired_cap = {
-        "platformName": "Android",
-        "appium:platformVersion": "10.0",
-        "appium:deviceName": "pocophone f1",
-        "appium:automationName": "UiAutomator2",
-        "appium:udid": "9a8a0ff0"
-        }
+      "platformName": "Android",
+      "appium:platformVersion": "10.0",
+      "appium:deviceName": "Galaxy Note2Note0 Ultra Ultra 5G",
+      "appium:automationName": "UiAutomator2",
+      "appium:udid": "R5CR518G10Y"
+    }
     return desired_cap
 
 

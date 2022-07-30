@@ -10,6 +10,7 @@ from pages.Login_fb import LoginFacebook
 from pages.Logout_fb import LogoutFacebook
 from pages.Login_gm import LoginGmail
 from pages.Logout_gm import LogoutGmail
+from appium.webdriver.common.touch_action import TouchAction
 
 
 
@@ -30,7 +31,7 @@ class LoginTest2(unittest.TestCase):
         self.loginfbobj = LoginFacebook(self.driver)
         self.logoutfbobj = LogoutFacebook(self.driver)
         self.logingmobj = LoginGmail(self.driver)
-        self.logingmobj = LogoutGmail(self.driver)
+        self.logoutgmobj = LogoutGmail(self.driver)
 
     def tearDown(self):
         self.driver.quit()
@@ -40,6 +41,7 @@ class LoginTest2(unittest.TestCase):
         Account facebook : True
         Expected : Login successfully
         """
+
         self.loginfbobj.login_account_fb(username="m.nhutle@okxe.vn", pwd="@Aa246357")
         self.loginobj.click_logo_okxe()
         # try:
@@ -54,7 +56,6 @@ class LoginTest2(unittest.TestCase):
         #     pass
         self.loginobj.click_button_login()
         self.loginobj1.click_icon_facebook()
-        time.sleep(10)
         self.loginobj.click_logo_account()
         text = self.loginobj.get_text_username_account()
         self.logoutobj.click_icon_setting()
@@ -118,7 +119,7 @@ class LoginTest2(unittest.TestCase):
         #     pass
         self.loginobj.click_button_login()
         self.loginobj1.click_icon_gmail()
-        self.logingmobj.enter_user_pwd_gmail(username="lenhut20121995@gmail.com", pwd="11762115")
+        self.logingmobj.enter_account_gmail(username="lenhut20121995@gmail.com", pwd="11762115")
         self.loginobj.click_logo_account()
         text = self.loginobj.get_text_username_account()
         self.logoutobj.click_icon_setting()
