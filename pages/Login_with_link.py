@@ -2,7 +2,7 @@ from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from locators.loginLocator import *
+from locators.login import *
 
 
 class LoginPage2:

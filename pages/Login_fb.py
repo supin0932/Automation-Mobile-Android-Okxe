@@ -1,4 +1,4 @@
-from locators.logoutLocator import *
+from locators.logout import *
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
