@@ -6,7 +6,7 @@ def get_desired_cap1():
       "appium:platformVersion": "10.0",
       "appium:deviceName": "Galaxy Note2Note0 Ultra Ultra 5G",
       "appium:automationName": "UiAutomator2",
-      "appium:udid": "R5CR518G10Y"
+      "appium:udid": "192.168.0.26:5555"
     }
     return desired_cap
 

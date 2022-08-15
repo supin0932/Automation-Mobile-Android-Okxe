@@ -45,3 +45,12 @@ def get_button_update_pwd_id():
 
 def get_button_comback_login_id():
     return "com.okxe.app:id/btn_confirm_single_mode"
+
+def get_text_warning_otp_id():
+    return "com.okxe.app:id/tv_title"
+
+def get_bt_back():
+    return 'com.okxe.app:id/iv_back'
+
+def get_bt_close():
+    return 'com.okxe.app:id/iv_close'

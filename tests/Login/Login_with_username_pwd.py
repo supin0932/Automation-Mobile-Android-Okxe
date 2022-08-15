@@ -5,6 +5,8 @@ from pages.Login_with_link import LoginPage2
 from pages.Login_with_username_pwd import *
 from pages.Logout import *
 from utils.driversManages import *
+from appium.webdriver.common.mobileby import MobileBy
+import time
 
 
 @pytest.mark.usefixmarkmarktures("driver_Testusefixmarkmarkclass")
@@ -25,25 +27,35 @@ class LoginTest1(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test_login_with_usr_pw_is_true(self):
+    def test_login_with_usr_is_true_pw_is_true(self):
         """
-        Username : True
-        Password : True
-        Expected : Login successfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get username
+        Step 4 : Logout account
+        Step 5 : Compare with expected result
+        *************************
+        Data : + Username : True
+               + Password : True
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
-        self.loginobj.enter_button_usr(usr="0932241574")
-        self.loginobj.enter_button_pwd(pwd="@Nhut1176")
+        self.loginobj.enter_button_usr(usr="0932949905")
+        self.loginobj.enter_button_pwd(pwd="@Aa246357")
         self.loginobj.click_button_enter_login()
         self.loginobj.click_logo_account()
         text = self.loginobj.get_text_username_account()
@@ -51,27 +63,72 @@ class LoginTest1(unittest.TestCase):
         self.logoutobj.click_button_logout()
         self.logoutobj.click_button_confirm_logout()
         self.driver.terminate_app('com.okxe.app')
-        if text == "nhut le":
+        if text == "Lê Minh Nhựt":
+            assert True
+        else:
+            assert False
+
+    def test_login_with_usr_is_false_pw_is_false(self):
+        """
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : Fasle
+               + Password : Fasle
+        Expected Result : Login unsuccessfull
+        """
+        self.driver.press_keycode(3)
+        self.loginobj.click_logo_okxe()
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        except:
+            pass
+        time.sleep(5)
+        self.loginobj.click_button_login()
+        self.loginobj.enter_button_usr(usr="09322415744")
+        self.loginobj.enter_button_pwd(pwd="@Aa24635777")
+        self.loginobj.click_button_enter_login()
+        text = self.loginobj.get_text_warning()
+        self.driver.terminate_app('com.okxe.app')
+        if text == "Tên đăng nhập không tồn tại.":
             assert True
         else:
             assert False
 
     def test_login_with_usr_is_true_pw_is_false(self):
         """
-        Username : True
-        Password : False
-        Expected : Login unsuccessfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : True
+               + Password : False
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="0932241574")
         self.loginobj.enter_button_pwd(pwd="@Aa2463577")
@@ -85,20 +142,29 @@ class LoginTest1(unittest.TestCase):
 
     def test_login_with_usr_is_false_pw_is_true(self):
         """
-        Username : False
-        Password : True
-        Expected : Login unsuccessfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : False
+               + Password : True
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="09322415744")
         self.loginobj.enter_button_pwd(pwd="@Aa246357")
@@ -110,22 +176,31 @@ class LoginTest1(unittest.TestCase):
         else:
             assert False
 
-    def test_login_with_usr_pw_is_empty(self):
+    def test_login_with_usr_is_empty_pw_is_empty(self):
         """
-        Username : Empty
-        Password : Empty
-        Expected : Login unsuccessfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : Empty
+               + Password : Empty
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="")
         self.loginobj.enter_button_pwd(pwd="")
@@ -137,22 +212,31 @@ class LoginTest1(unittest.TestCase):
         else:
             assert False
 
-    def test_login_with_usr_is_empty(self):
+    def test_login_with_usr_is_empty_pwd_is_true(self):
         """
-        Username : Empty
-        Password : True
-        Expected : Login unsuccessfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : Empty
+               + Password : True
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="")
         self.loginobj.enter_button_pwd(pwd="@Aa246357")
@@ -165,25 +249,106 @@ class LoginTest1(unittest.TestCase):
             assert False
 
 
-    def test_login_with_pwd_is_empty(self):
+    def test_login_with_usr_is_true_pwd_is_empty(self):
         """
-        Username : True
-        Password : Empty
-        Expected : Login unsuccessfully
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : True
+               + Password : Empty
+        Expected Result : Login unsuccessfull
         """
         self.driver.press_keycode(3)
         self.loginobj.click_logo_okxe()
-        # try:
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_next_banner()
         #     self.loginobj.click_button_complete_banner()
         #     self.loginobj.click_button_locate_unaccept()
         #
-        # except:
-        #     pass
+        except:
+            pass
+        time.sleep(5)
         self.loginobj.click_button_login()
         self.loginobj.enter_button_usr(usr="0932241574")
         self.loginobj.enter_button_pwd(pwd="")
+        self.loginobj.click_button_enter_login()
+        text = self.loginobj.get_text_warning()
+        self.driver.terminate_app('com.okxe.app')
+        if text == "Thông tin đăng nhập và mật khẩu không được bỏ trống.":
+            assert True
+        else:
+            assert False
+
+    def test_login_with_usr_is_false_pwd_is_empty(self):
+        """
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : False
+               + Password : Empty
+        Expected Result : Login unsuccessfull
+        """
+        self.driver.press_keycode(3)
+        self.loginobj.click_logo_okxe()
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        except:
+            pass
+        time.sleep(5)
+        self.loginobj.click_button_login()
+        self.loginobj.enter_button_usr(usr="@0932241574")
+        self.loginobj.enter_button_pwd(pwd="")
+        self.loginobj.click_button_enter_login()
+        text = self.loginobj.get_text_warning()
+        self.driver.terminate_app('com.okxe.app')
+        if text == "Thông tin đăng nhập và mật khẩu không được bỏ trống.":
+            assert True
+        else:
+            assert False
+
+    def test_login_with_usr_is_empty_pwd_is_false(self):
+        """
+        Step 1 : Open website OKXE
+        Step 2 : Login account
+        Step 3 : Get text warning
+        Step 4 : Compare with expected result
+        *************************
+        Data : + Username : Empty
+               + Password : False
+        Expected Result : Login unsuccessfull
+        """
+        self.driver.press_keycode(3)
+        self.loginobj.click_logo_okxe()
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            click_login = wait.until(EC.element_to_be_clickable((MobileBy.ID, "com.okxe.app:id/imageButton_noticeDialog_close")))
+            click_login.click()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_next_banner()
+        #     self.loginobj.click_button_complete_banner()
+        #     self.loginobj.click_button_locate_unaccept()
+        #
+        except:
+            pass
+        time.sleep(5)
+        self.loginobj.click_button_login()
+        self.loginobj.enter_button_usr(usr="")
+        self.loginobj.enter_button_pwd(pwd="12345678")
         self.loginobj.click_button_enter_login()
         text = self.loginobj.get_text_warning()
         self.driver.terminate_app('com.okxe.app')

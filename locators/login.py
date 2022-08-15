@@ -51,3 +51,4 @@ def get_icon_gmail_id():
 
 def get_logo_facebook_id():
     return "Facebook"
+

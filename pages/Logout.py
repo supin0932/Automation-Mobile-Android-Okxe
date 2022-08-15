@@ -2,7 +2,7 @@ from locators.logout import *
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import time
 
 class LogoutPage:
     def __init__(self, driver):
@@ -27,4 +27,5 @@ class LogoutPage:
         print("Click button confirm logout")
         click_button_confirm_logout = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((MobileBy.ID, get_button_confirm_logout_id())))
         click_button_confirm_logout.click()
+        time.sleep(3)
 

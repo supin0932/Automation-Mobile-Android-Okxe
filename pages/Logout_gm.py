@@ -18,10 +18,10 @@ class LogoutGmail:
         CLICK = WebDriverWait(self.driver, 30).until(
             EC.element_to_be_clickable((MobileBy.ID, "com.google.android.gm:id/og_apd_ring_view")))
         CLICK.click()
+        time.sleep(5)
+        TouchAction(self.driver).tap(x=555, y=903).perform()
         time.sleep(3)
-        TouchAction(self.driver).tap(x=518, y=1203).perform()
-        time.sleep(3)
-        TouchAction(self.driver).tap(x=488, y=357).perform()
+        TouchAction(self.driver).tap(x=521, y=371).perform()
         time.sleep(3)
         CLICK = WebDriverWait(self.driver, 30).until(
             EC.element_to_be_clickable((MobileBy.ID, "com.android.settings:id/button")))

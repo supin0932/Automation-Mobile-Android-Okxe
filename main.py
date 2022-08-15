@@ -14,12 +14,12 @@ if __name__ == '__main__':
     forgetpwd = unittest.TestLoader().loadTestsFromTestCase(ForgetPWD)
     registeraccount = unittest.TestLoader().loadTestsFromTestCase(RegisterAccount)
 
-
-
     """ create a tests suite """
     test_suite_login_usr_pw = unittest.TestSuite([login_usr_pw])
     test_suite_login_link = unittest.TestSuite([login_link])
+    test_suite_forgetpwd = unittest.TestSuite([forgetpwd])
 
     """" run the suite """
     unittest.TextTestRunner().run(test_suite_login_link)
     unittest.TextTestRunner().run(test_suite_login_usr_pw)
+    unittest.TextTestRunner().run(test_suite_forgetpwd)
