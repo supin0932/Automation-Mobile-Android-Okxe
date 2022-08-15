@@ -1,0 +1,6 @@
+Click logo okxe
+Click button login
+Click forget password
+Enter numberphone
+Click button continue
+Get OTP

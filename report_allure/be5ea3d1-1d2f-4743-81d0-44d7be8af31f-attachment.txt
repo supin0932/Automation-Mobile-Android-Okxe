@@ -1,0 +1,12 @@
+Login account facebook
+Click logo okxe
+Click button next banner
+Click button login
+Click icon facebook
+Click logo account
+Get text username accoutn
+Click icon setting
+Click button logout
+Click button confirm logout
+Click icon home
+Logout Facebook
